@@ -1,5 +1,4 @@
 from loguru import logger
-import re
 import json
 
 def get_contacts_dict(contacts_file):
