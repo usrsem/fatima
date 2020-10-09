@@ -14,9 +14,9 @@ def get_contacts_dict(contacts_file):
                         errors='replace').decode('utf8', 
                         errors='replace').replace('\n', '')
                 contacts_dict.update({contact_nickname: {
-                                                            'name': contact_name_decoded,
-                                                            'conversations': {}
-                                                        }})    
+                                        'name': contact_name_decoded,
+                                        'conversations': {}
+                                      }})
             except UnicodeEncodeError:
                 logger.error(f'problem with decoding in {contact_name_encoded}')
                 continue
