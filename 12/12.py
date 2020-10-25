@@ -1,6 +1,7 @@
 from loguru import logger
 import json
 
+
 def get_contacts_dict(contacts_file):
     contacts_dict = {}
     logger.info('starting')
@@ -24,7 +25,6 @@ def get_contacts_dict(contacts_file):
     logger.info('contacts_dict was created')
     return contacts_dict
 
-
 def get_conversations(conversations_file, contacts_dict):
     with open (f'{conversations_file}', 'r', encoding='utf-8') as conversations_file:
         logger.info(f'file {conversations_file} was opened')
@@ -41,7 +41,6 @@ def get_conversations(conversations_file, contacts_dict):
     get_result(contacts_dict)
     logger.info('done !')
     return contacts_dict
-
 
 def get_result(result):
     print(json.dumps(result, indent=4, ensure_ascii=False))
